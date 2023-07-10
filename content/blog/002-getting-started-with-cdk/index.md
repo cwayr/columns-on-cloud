@@ -1,7 +1,7 @@
 ---
 title: Getting started with AWS CDK
 date: "2023-07-08"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: How to get started using AWS Cloud Development Kit for the beginner. An overview of essential knowledge, alongside a practical example.
 ---
 
 The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework that allows you to define your cloud infrastructure in code using familiar programming languages. It simplifies, automates, and accelerates cloud development by providing high-level constructs, consistent workflows, and reliable deployments. In this article, we will introduce the key concepts and features of the AWS CDK, and show how to install and configure it, and create a simple app using one of the supported programming languages.

@@ -35,26 +35,24 @@ When you run the `cdk synth` command, the AWS CDK synthesizes your app into one 
 
 Here is an example of a simple CDK app that creates an Amazon S3 bucket:
 
-```
-// TypeScript example
-import * as cdk from 'aws-cdk-lib';
-import * as s3 from 'aws-cdk-lib/aws-s3';
+```typescript
+import * as cdk from "aws-cdk-lib"
+import * as s3 from "aws-cdk-lib/aws-s3"
 
 export class MyBucketStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string) {
-    super(scope, id);
+    super(scope, id)
 
     // Create a new S3 bucket
-    new s3.Bucket(this, 'MyBucket', {
+    new s3.Bucket(this, "MyBucket", {
       versioned: true,
       encryption: s3.BucketEncryption.KMS_MANAGED,
-    });
+    })
   }
 }
 
-const app = new cdk.App();
-new MyBucketStack(app, 'MyBucketStack');
-
+const app = new cdk.App()
+new MyBucketStack(app, "MyBucketStack")
 ```
 
 ## How to get started with the AWS CDK?

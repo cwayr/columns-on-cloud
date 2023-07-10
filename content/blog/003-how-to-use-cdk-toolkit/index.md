@@ -1,7 +1,7 @@
 ---
 title: How to use the AWS CDK Toolkit ('cdk' command)
 date: "2023-07-08"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: Using CDK requires knowledge of the toolkit. This guide will walk you through the essential CLI commands you need to effectively develop with AWS CDK.
 ---
 
 The AWS CDK Toolkit is a command-line interface that allows you to work with your AWS CDK apps and stacks. It lets you perform various tasks such as synthesizing, deploying, diffing, destroying, and more. In this article, we will cover the basics of using the cdk command and how to configure it for your needs.
@@ -10,13 +10,13 @@ The AWS CDK Toolkit is a command-line interface that allows you to work with you
 
 The AWS CDK Toolkit is installed with the Node Package Manager (npm). You can install it globally with the following command:
 
-```
+```bash
 npm install -g aws-cdk
 ```
 
 Alternatively, you can install it locally in your CDK project directory and use npx to invoke it:
 
-```
+```bash
 npm install aws-cdk
 npx aws-cdk
 ```
