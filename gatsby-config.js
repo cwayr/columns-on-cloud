@@ -23,6 +23,19 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-3QWN16MBR7", // Google Analytics
+        ],
+        pluginConfig: {
+          head: true, // Puts tracking script in the head instead of the body
+          origin: "https://columnsoncloud.com",
+          delayOnRouteUpdate: 0, // Delays processing pageview events on route update (in milliseconds)
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,

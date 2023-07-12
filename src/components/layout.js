@@ -11,15 +11,15 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1 className="main-heading">
         <Link to="/">
+          {title}{" "}
           <StaticImage
             src="../images/icon.png"
             alt="A Cloud"
             height={80}
             width={80}
             placeholder="blurred"
-            style={{ bottom: 14 }}
-          />{" "}
-          {title}
+            style={{ bottom: 16 }}
+          />
         </Link>
       </h1>
     )
