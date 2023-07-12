@@ -15,13 +15,14 @@ module.exports = {
       summary: ``,
     },
     description: `Cloud resources and articles, focused on development with AWS.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://columnsoncloud.com/`,
     // social: {
     //   twitter: `calebwaymeyer`,
     // },
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
