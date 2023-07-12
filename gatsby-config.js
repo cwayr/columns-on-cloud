@@ -22,7 +22,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -32,6 +31,28 @@ module.exports = {
         pluginConfig: {
           head: true, // Puts tracking script in the head instead of the body
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        query: `
+            {
+              site {
+                siteMetadata {
+                  siteUrl
+                }
+              }
+    
+              allSitePage {
+                edges {
+                  node {
+                    path
+                  }
+                }
+              }
+          }`,
       },
     },
     {
