@@ -30,8 +30,6 @@ module.exports = {
         ],
         pluginConfig: {
           head: true, // Puts tracking script in the head instead of the body
-          origin: "https://columnsoncloud.com",
-          delayOnRouteUpdate: 0, // Delays processing pageview events on route update (in milliseconds)
         },
       },
     },
