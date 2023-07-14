@@ -7,16 +7,20 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
   let header
 
+  const [title1, title2] = title.split(" cloud")
+  console.log(title1, title2)
+
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
         <Link to="/">
-          {title}{" "}
+          <span className="title-1">{title1}</span>
+          <span className="title-2">{title2}</span>{" "}
           <StaticImage
             src="../images/icon.png"
             alt="A Cloud"
-            height={80}
-            width={80}
+            height={70}
+            width={70}
             placeholder="blurred"
             style={{ bottom: 16 }}
           />

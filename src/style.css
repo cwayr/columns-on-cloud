@@ -55,7 +55,7 @@
   --fontSize-7: 2.986rem;
   --color-primary: #005b99;
   --color-text: #2e353f;
-  --color-text-light: #4f5969;
+  --color-text-light: #5f697a;
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
@@ -158,6 +158,10 @@ h6 > a {
   color: inherit;
 }
 
+.article-date-subheading {
+  color: var(--color-text-light);
+}
+
 /* Prose */
 
 p {
@@ -255,13 +259,17 @@ a:focus {
 }
 
 .global-header {
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-10);
 }
 
 .main-heading {
-  font-size: var(--fontSize-7);
+  font-size: var(--fontSize-6);
   margin: 0;
 }
+
+/* .main-heading .title-2 {
+  color: var(--color-primary);
+} */
 
 .post-list-item {
   margin-bottom: var(--spacing-8);

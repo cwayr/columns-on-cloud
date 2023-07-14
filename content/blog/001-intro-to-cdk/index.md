@@ -1,5 +1,5 @@
 ---
-title: "The AWS CDK for Beginners: A Practical Guide"
+title: "The AWS CDK for Beginners"
 date: "2023-07-08"
 description: Introduction to the AWS Cloud Development Kit (CDK), explaining key benefits like infrastructure as code, higher level abstractions, and local tooling (with a simple CDK app example).
 ---
