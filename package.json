@@ -1,15 +1,19 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "columns-on-cloud",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A developers blog with a focus on cloud technologies and AWS",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Caleb Waymeyer <cjwaymeyer@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/cwaymeyer/columns-on-cloud/issues"
   },
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.0.4",
+    "@fontsource/arvo": "^5.0.5",
+    "@fontsource/lora": "^5.0.5",
     "@fontsource/merriweather": "^5.0.3",
+    "@fontsource/raleway": "^5.0.5",
+    "@fontsource/zilla-slab": "^5.0.5",
     "gatsby": "^5.11.0",
     "gatsby-plugin-feed": "^5.11.0",
     "gatsby-plugin-google-gtag": "^5.11.0",
@@ -30,14 +34,16 @@
   "devDependencies": {
     "prettier": "^2.8.8"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/cwaymeyer/columns-on-cloud#readme",
   "keywords": [
-    "gatsby"
+    "blog",
+    "cloud",
+    "aws"
   ],
   "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/cwaymeyer/columns-on-cloud.git"
   },
   "scripts": {
     "build": "gatsby build",

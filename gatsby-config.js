@@ -14,13 +14,14 @@ module.exports = {
       name: `Caleb Waymeyer`,
       summary: ``,
     },
-    description: `Cloud resources and articles, focused on development with AWS.`,
-    siteUrl: `https://columnsoncloud.com/`,
+    description: `Developer blog focused on cloud technology and AWS. Explanations, how-tos and step-by-step development tutorials for coding with tools such as AWS CDK.`,
+    siteUrl: `https://www.columnsoncloud.com`,
     // social: {
     //   twitter: `calebwaymeyer`,
     // },
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-google-gtag`,
@@ -33,7 +34,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

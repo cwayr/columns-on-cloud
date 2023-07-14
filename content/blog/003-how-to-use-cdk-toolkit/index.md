@@ -1,53 +1,86 @@
 ---
 title: How to use the AWS CDK Toolkit ('cdk' command)
 date: "2023-07-08"
-description: Using CDK requires knowledge of the toolkit. This guide will walk you through the essential CLI commands you need to effectively develop with AWS CDK.
+description: The AWS CDK Toolkit is a command line interface that allows developers to work with CDK apps and stacks; this article will outline all the basics you need to know to effectively work with the 'cdk' command.
 ---
 
-The AWS CDK Toolkit is a command-line interface that allows you to work with your AWS CDK apps and stacks. It lets you perform various tasks such as synthesizing, deploying, diffing, destroying, and more. In this article, we will cover the basics of using the cdk command and how to configure it for your needs.
+The AWS Cloud Development Kit (CDK) Toolkit is an essential tool for developers using CDK to define cloud infrastructure in code. This handy command-line interface lets you easily work with CDK apps and stacks right from your terminal.
 
-## Installing the AWS CDK Toolkit
+In this guide, we'll cover the key things you need to know to start being productive with the CDK Toolkit.
 
-The AWS CDK Toolkit is installed with the Node Package Manager (npm). You can install it globally with the following command:
+## Installation
+
+Install the CDK Toolkit globally using npm:
 
 ```bash
 npm install -g aws-cdk
 ```
 
-Alternatively, you can install it locally in your CDK project directory and use npx to invoke it:
+Or install it locally and use npx to invoke it:
 
 ```bash
 npm install aws-cdk
-npx aws-cdk
+npx cdk --version
 ```
 
-This way, you can use different versions of the AWS CDK Toolkit for different projects.
+## Initializing a New CDK App
 
-## Using the cdk command
+Use the `cdk init` command to bootstrap a new CDK project:
 
-The cdk command has several subcommands that perform different actions on your CDK app or stacks. You can use the **`--help`** option or the **`cdk docs`** subcommand to get more information about each subcommand and its options.
+```bash
+cdk init app --language typescript
+```
 
-Here are some of the most common subcommands and what they do:
+This scaffolds a starter app with example constructs in your chosen language. It provides the basic setup needed to define and synthesize CDK stacks.
 
-- **`cdk init`**: Creates a new CDK project in the current directory from a specified template. You can choose from different languages and project types, such as app or library.
-- **`cdk list`**: Lists the stacks in your CDK app. You can use the **`-long`** option to see more details about each stack, such as its dependencies and outputs.
-- **`cdk synth`**: Synthesizes and prints the CloudFormation template for one or more specified stacks. You can use this to inspect the generated template or save it to a file for further processing.
-- **`cdk deploy`**: Deploys one or more specified stacks to your AWS account. You can use the **`-require-approval`** option to control whether you need to confirm any changes before deployment. You can also use the **`-outputs-file`** option to save the stack outputs to a file for later use.
-- **`cdk diff`**: Compares the specified stack and its dependencies with the deployed stack or a local CloudFormation template. You can use this to see what changes will be applied by a deployment or to detect any drifts from the expected state.
-- **`cdk destroy`**: Destroys one or more specified stacks from your AWS account. You can use the **`-force`** option to skip confirmation prompts.
+## Key Commands
 
-## Configuring the cdk command
+### `cdk synth`
 
-The cdk command uses some settings and options to interact with your AWS account and region, such as your credentials, profile, and region. You can configure these settings in different ways, such as:
+The `cdk synth` command synthesizes your CDK app into raw CloudFormation templates.
 
-- Using environment variables, such as **`AWS_ACCESS_KEY_ID`**, **`AWS_SECRET_ACCESS_KEY`**, **`AWS_PROFILE`**, and **`AWS_DEFAULT_REGION`**.
-- Using command-line options, such as **`-profile`**, **`-region`**, and **`-role-arn`**.
-- Using a configuration file, such as **`~/.aws/config`** or **`.cdk.json`**.
+Behind the scenes, it invokes the synthesis process which transforms the CDK constructs into formatted CloudFormation YAML/JSON. This is useful for inspecting the generated templates before deployment.
 
-You can also use context values to provide additional information to your CDK app, such as parameters, feature flags, or environment variables. You can specify context values using the **`-c`** option or the **`cdk context`** subcommand.
+### `cdk diff`
 
-For more information about configuring the cdk command, see [AWS CDK Toolkit (cdk command)](https://docs.aws.amazon.com/cdk/v2/guide/cli.html).
+The `cdk diff` command compares your locally synthesized templates against deployed stack templates or a local CloudFormation template.
 
-## Conclusion
+This helps you preview changes before deploying updates. It's important for avoiding unintentional changes going into production.
 
-The AWS CDK Toolkit is a powerful tool that enables you to work with your AWS CDK apps and stacks using a familiar programming language. It provides various subcommands and options that let you create, synthesize, deploy, compare, and destroy your cloud infrastructure in code. By using the cdk command, you can leverage the benefits of AWS CloudFormation and AWS CDK in a convenient and consistent way.
+### `cdk deploy`
+
+The `cdk deploy` command deploys your stacks into your default AWS account and region.
+
+It first synthesizes the templates, and then deploys the generated CloudFormation stacks using CloudFormation's CreateChangeset API. This is how you push changes in your CDK app into your AWS account.
+
+> Note: `cdk synth` and `cdk diff` are not required before running `cdk deploy`. `cdk deploy` will generate and deploy a CFT all on it's own.
+
+### `cdk context`
+
+The `cdk context` command lets you set key-value pairs that serve as contextual information for your CDK app.
+
+This is useful for parameterizing your stacks for different environments. For example, you can set an environment variable to switch between production vs staging backends.
+
+## Configuring Credentials
+
+The CDK Toolkit uses your configured AWS CLI credentials and profiles. Make sure these are set up properly.
+
+For example, to use a named profile:
+
+```bash
+cdk deploy --profile myProfile
+```
+
+See the [CDK Toolkit docs](https://docs.aws.amazon.com/cdk/v2/guide/cli.html) for more configuration options.
+
+## Recap
+
+Key takeaways:
+
+- Use `cdk init` to bootstrap new CDK apps
+- `cdk synth` generates CloudFormation templates
+- `cdk diff` previews changes before deploying
+- `cdk deploy` deploys stacks into your AWS account
+- Configure AWS credentials as needed
+
+The CDK Toolkit unlocks the full power of infrastructure as code with AWS CDK. Give it a try today!
