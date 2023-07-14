@@ -4,7 +4,7 @@ date: "2023-07-14"
 description: A practical guide to migrating AWS CDK projects from version 1 to 2 by updating dependencies, imports, construct patterns, bootstrapping, and validating changes.
 ---
 
-The AWS Cloud Development Kit (AWS CDK) recently released version 2, which introduces some breaking changes compared to version 1. As a developer using CDK, you will need to migrate your projects and apps to work with the new version. This guide provides practical steps and examples to help you with the migration process.
+At the end of 2021, AWS released their Cloud Development Kit (CDK) version 2, which introduces some breaking changes compared to version 1. As a developer using CDK, you may still have applications that use CDK version 1. This guide provides practical steps and examples to help you with the migration process.
 
 ## Overview of Changes in CDK V2
 
@@ -26,7 +26,7 @@ First, update your CDK Toolkit and package dependencies:
 npm install aws-cdk-lib@latest
 
 # Remove old CDK packages
-npm uninstall @aws-cdk/aws-s3 @aws-cdk/aws-lambda
+npm uninstall @aws-cdk/aws-s3 @aws-cdk/aws-lambda ...
 ```
 
 Your `package.json` should now only reference `aws-cdk-lib` instead of individual packages.
@@ -75,6 +75,8 @@ const bucket = s3.Bucket.fromBucketAttributes(this, "myBucket", {
 })
 ```
 
+Navigate to the [CDK API reference page](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html) to view the constructs and properties available for each service.
+
 ## Step 4: Update Bootstrap and Deploy
 
 To deploy your V2 stack, first bootstrap using the new template:
@@ -91,7 +93,7 @@ cdk deploy
 
 Make sure your CDK Toolkit version matches the `aws-cdk-lib` version!
 
-> Use `cdk diff` and `cdk doctor` to identify any other changes needed.
+> Use `cdk diff` and `cdk doctor` to identify any changes that are needed.
 
 ## Conclusion
 

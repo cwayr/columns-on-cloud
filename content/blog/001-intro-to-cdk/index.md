@@ -6,21 +6,21 @@ description: Introduction to the AWS Cloud Development Kit (CDK), explaining key
 
 The AWS Cloud Development Kit (CDK) is an open source software development framework for defining cloud infrastructure in code and provisioning it through AWS.
 
-With the CDK, you can use familiar programming languages like TypeScript, Python, Java etc. to model your cloud resources. The CDK handles converting your code into AWS infrastructure through CloudFormation.
+With CDK, you can use familiar programming languages like TypeScript, Python, Java etc. to model your cloud resources. CDK handles converting your code into AWS infrastructure through CloudFormation.
 
 This lets you leverage the power of programming to create reusable infrastructure components. You can deploy and manage them using the CDK toolkit locally, without needing the AWS console.
 
-Now let's dive into the key benefits of using the CDK as a developer...
+Now let's dive into the key benefits of using CDK as a developer...
 
-## Why Use the CDK?
+## Why Use CDK?
 
-For developers, the CDK offers 3 major benefits:
+For developers, CDK offers 3 major benefits:
 
 ### 1. Infrastructure as Code
 
 You can define your AWS resources in a familiar programming language instead of JSON/YAML. This unlocks the full power of abstraction, modularity, and reuse.
 
-For example, here's a TypeScript script to create an S3 bucket in CDK:
+For example, here's how you could create an S3 bucket using TypeScript CDK:
 
 ```typescript
 import { Bucket, BucketEncryption } from "aws-cdk-lib/aws-s3"
@@ -38,7 +38,7 @@ export class MyBucket extends Construct {
 }
 ```
 
-Much more flexible than YAML!
+Much easier to digest than YAML!
 
 ### 2. Higher-Level Abstractions
 
@@ -57,7 +57,7 @@ const fargateService = new FargateService(this, "MyFargateService", {
 fargateService.autoScaleTaskCount({ minCapacity: 2, maxCapacity: 10 })
 ```
 
-This abstracts all the complex plumbing.
+This abstracts all the complex plumbing. Many services can be easily linked together, ready to deploy (or destroy... and re-deploy!) in a matter of seconds.
 
 ### 3. Local Tooling
 
@@ -67,7 +67,7 @@ The CDK toolkit lets you work locally without needing the AWS console:
 - `cdk diff` to compare local vs deployed stacks
 - `cdk deploy` to provision stacks to your account
 
-Overall, the CDK enables developers to use their existing languages and tools to build reusable infrastructure patterns.
+Overall, CDK enables developers to use their existing languages and tools to build reusable infrastructure patterns.
 
 ## A Simple CDK App
 
@@ -104,7 +104,7 @@ export class CdkStack extends Construct {
 
 We can deploy this stack to AWS via `cdk deploy`. The Lambda will run each time a file lands in the bucket.
 
-This shows the CDK's value in letting us define reusable patterns in code.
+This shows CDK's value in letting us define reusable patterns in code.
 
 ## Getting Started
 
@@ -117,4 +117,4 @@ To start using the AWS CDK:
 
 See the [CDK Developer Guide](https://docs.aws.amazon.com/cdk/v2/guide/home.html) for in-depth tutorials.
 
-The AWS CDK enables developers to use the power of programming to define cloud infrastructure. With its abstractions, local tooling, and integration with modern languages, it unlocks new agility and productivity.
+AWS CDK enables developers to use the power of programming to define cloud infrastructure. With its abstractions, local tooling, and integration with modern languages, it unlocks new agility and productivity.

@@ -14,6 +14,21 @@ Before starting, make sure you have:
 - Node.js 14.x or later
 - AWS credentials configured
 
+> **How to install Node.js and TypeScript?**
+>
+> If you don’t have Node.js installed on your machine, you can download it **[here](https://nodejs.org/en/download)**. To check if you have Node.js installed, run the following command in your terminal:
+>
+> ```bash
+> node --version # make sure your version is 14.x or later
+> ```
+>
+> To install TypeScript, run the following command in your terminal:
+>
+> ```bash
+> npm install -g typescript
+> tsc --version # check installation
+> ```
+
 ## **Install the CDK Toolkit**
 
 Install the latest CDK Toolkit globally:
@@ -27,6 +42,10 @@ Check the installation:
 ```bash
 cdk --version
 ```
+
+> **What is the CDK Toolkit?**
+>
+> The CDK Toolkit is a command-line tool that allows you to interact with CDK apps. It lets you create, deploy, and manage CDK stacks, as well as perform other tasks such as synthesizing templates, diffing stacks, and bootstrapping environments.
 
 ## **Initialize a CDK App**
 
@@ -42,7 +61,11 @@ This creates a sample stack and supporting files.
 
 The **[CDK API Reference](https://docs.aws.amazon.com/cdk/api/v2/)** documents all available constructs.
 
-For example, to make an S3 bucket, look at the **`[Bucket` API docs](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_s3.Bucket.html)**.
+For example, to make an S3 bucket, look at the **[`Bucket` API docs](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_s3.Bucket.html)**.
+
+> **What are constructs?**
+>
+> Constructs are the building blocks of CDK apps. They represent cloud components that can be composed together to form higher-level abstractions. Constructs can be either low-level or high-level. Low-level constructs, also known as CloudFormation Resource Constructs (or CfnResources), provide direct access to the AWS CloudFormation resources. High-level constructs, also known as AWS Constructs (or L2 constructs), provide convenient defaults and syntactic sugar for common cloud patterns.
 
 ## **Define an S3 Bucket**
 
