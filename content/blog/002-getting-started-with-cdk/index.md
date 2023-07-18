@@ -14,20 +14,20 @@ Before starting, make sure you have:
 - Node.js 14.x or later
 - AWS credentials configured
 
-> **How to install Node.js and TypeScript?**
->
-> If you don’t have Node.js installed on your machine, you can download it **[here](https://nodejs.org/en/download)**. To check if you have Node.js installed, run the following command in your terminal:
->
-> ```bash
-> node --version # make sure your version is 14.x or later
-> ```
->
-> To install TypeScript, run the following command in your terminal:
->
-> ```bash
-> npm install -g typescript
-> tsc --version # check installation
-> ```
+**How to install Node.js and TypeScript?**
+
+If you don’t have Node.js installed on your machine, you can download it **[here](https://nodejs.org/en/download)**. To check if you have Node.js installed, run the following command in your terminal:
+
+```bash
+node --version # make sure your version is 14.x or later
+```
+
+To install TypeScript, run the following command in your terminal:
+
+```bash
+npm install -g typescript
+tsc --version # check installation
+```
 
 ## **Install the CDK Toolkit**
 
