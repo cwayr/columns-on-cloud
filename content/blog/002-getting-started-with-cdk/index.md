@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with AWS CDK: A Step-by-Step Guide"
-date: "2023-07-08"
+date: "2023-07-09"
 description: How to get started with the AWS Cloud Development Kit (CDK) to define cloud infrastructure through code. Covers initializing a CDK app, finding constructs in the API reference, writing infrastructure code, and deploying stacks using the CDK toolkit.
 ---
 

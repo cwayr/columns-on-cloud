@@ -1,6 +1,6 @@
 ---
 title: How to use the AWS CDK Toolkit ('cdk' command)
-date: "2023-07-08"
+date: "2023-07-10"
 description: The AWS CDK Toolkit is a command line interface that allows developers to work with CDK apps and stacks; this article will outline all the basics you need to know to effectively work with the 'cdk' command.
 ---
 

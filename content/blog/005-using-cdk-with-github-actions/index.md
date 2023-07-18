@@ -1,12 +1,10 @@
 ---
 title: "Using AWS CKD with GitHub Actions (example)"
-date: "2023-07-14"
+date: "2023-07-17"
 description: Dive into this practical guide on how to integrate AWS CDK with GitHub Actions for streamlined deployments, including step-by-step instructions, potential pitfalls, and their solutions.
 ---
 
-# How to use CDK with GitHub Actions (example)
-
-Given that you already have an existing AWS CDK project, integrating it with GitHub Actions can streamline your deployment process. This straightforward guide aims to explain this process while addressing potential issues you might encounter.
+Incorporating GitHub Actions into your AWS CDK project can enhance your deployment workflow, promoting seamless automation and efficiency. This guide offers step-by-step instructions to facilitate this integration, while also addressing potential challenges that may arise throughout the process.
 
 ## **AWS Credentials and GitHub Secrets**
 

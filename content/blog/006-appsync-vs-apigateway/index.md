@@ -1,6 +1,6 @@
 ---
 title: "AWS AppSync vs API Gateway: Which Should I Use?"
-date: "2023-07-17"
+date: "2023-07-18"
 description: Explore a comprehensive comparison between AWS AppSync and API Gateway in this article. Learn about their features, pricing, and use-cases, and get the information you need to make the right decision for your API development project.
 ---
 
@@ -36,8 +36,8 @@ Pricing for both AppSync and API Gateway is primarily usage-based. While multipl
 
 ### **AppSync**
 
-- $4.00 per million Query and Data Modification Operations
-- $2.00 per million Real-Time Updates
+- $4.00 per million Query and Data Modification Operations.
+- $2.00 per million Real-Time Updates.
 - Data Transfer is priced separately and varies by region, it starts from $0.09 per GB.
 
 ### **API Gateway (for REST APIs)**
@@ -47,9 +47,9 @@ Pricing for both AppSync and API Gateway is primarily usage-based. While multipl
 
 For WebSocket APIs in API Gateway:
 
-- $1.00 per million messages, plus $0.20 per million connection minutes
+- $1.00 per million messages, plus $0.20 per million connection minutes.
 
-View the **[AWS AppSync Pricing](https://aws.amazon.com/appsync/pricing/)** and **[Amazon API Gateway Pricing](https://aws.amazon.com/api-gateway/pricing/)** pages for the latest pricing information
+View the **[AWS AppSync Pricing](https://aws.amazon.com/appsync/pricing/)** and **[Amazon API Gateway Pricing](https://aws.amazon.com/api-gateway/pricing/)** pages for the latest pricing information.
 
 Remember that both services offer a free tier for new AWS customers, and costs may also vary depending on the region where your resources are hosted. Make sure to consider these factors when calculating the cost for your specific use case.
 
