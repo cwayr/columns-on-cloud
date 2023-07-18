@@ -1,5 +1,5 @@
 ---
-title: "Node.js Essentials: Understanding package.json, package-lock.json, and node_modules"
+title: "Understanding Node.js: package.json, package-lock.json, and node_modules"
 date: "2023-07-18"
 description: Discover the essentials of Node.js, focusing on the key files package.json, package-lock.json, and node_modules. This guide provides insights into their roles, contents, and practical use for efficient project management in Node.js applications.
 ---
@@ -45,11 +45,13 @@ Node dependencies can sometimes introduce issues, particularly when working with
 - If you encounter unexpected behavior, try deleting your node_modules folder and package-lock.json file, then running **`npm install`** again. This step will fetch the latest packages that match the version ranges defined in your package.json.
 - Ensure that everyone on your team is using the same npm version. Differences in npm versions can cause discrepancies in how package-lock.json is generated, leading to potential conflicts.
 
-> npm commands to assist in resolving dependency errors:
+> **npm commands to assist in resolving dependency errors:**
 >
-> - **`npm outdated`**: This command will check the registry to see if any (or, specific) installed packages are currently outdated.
-> - **`npm audit`**: This command assesses your dependency tree to find anomalies and recommends a command to run to update all outdated packages.
-> - **`npm dedupe`**: This command searches the package tree and simplifies it by removing duplicates.
+> **`npm outdated`**: This command will check the registry to see if any (or, specific) installed packages are currently outdated.
+>
+> **`npm audit`**: This command assesses your dependency tree to find anomalies and recommends a command to run to update all outdated packages.
+>
+> **`npm dedupe`**: This command searches the package tree and simplifies it by removing duplicates.
 
 ## **Conclusion**
 

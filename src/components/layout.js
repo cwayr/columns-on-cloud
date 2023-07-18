@@ -7,22 +7,15 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
   let header
 
-  const [title1, title2] = title.split(" cloud")
-  console.log(title1, title2)
-
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
+      <h1 className="main-heading" style={{ textAlign: "center" }}>
         <Link to="/">
-          <span className="title-1">{title1}</span>
-          <span className="title-2">{title2}</span>{" "}
           <StaticImage
-            src="../images/icon.png"
-            alt="A Cloud"
-            height={70}
-            width={70}
+            src="../images/logo-light.png"
+            alt="Column on Cloud logo and header"
             placeholder="blurred"
-            style={{ bottom: 16 }}
+            style={{ width: "85%" }}
           />
         </Link>
       </h1>
@@ -31,22 +24,13 @@ const Layout = ({ location, title, children }) => {
     header = (
       <>
         <Link className="header-link-home" to="/">
-          {title}
-        </Link>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
           <StaticImage
-            src="../images/icon.png"
-            alt="A Cloud"
-            height={160}
-            width={160}
+            src="../images/logo-light.png"
+            alt="Columns on Cloud logo and header"
+            style={{ width: "160px" }}
             placeholder="blurred"
           />
-        </div>
+        </Link>
       </>
     )
   }
