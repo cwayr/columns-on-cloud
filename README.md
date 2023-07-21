@@ -2,9 +2,11 @@
 
 <p align="center">
   <a href="https://www.columnsoncloud.com">
-    <img alt="Gatsby" src="https://github.com/cwaymeyer/columns-on-cloud/blob/master/src/images/logo-dark.png" width="600" />
+    <img alt="Gatsby" src="https://github.com/cwaymeyer/columns-on-cloud/blob/master/src/images/logo-light.png" width="600" />
   </a>
 </p>
+
+<hr />
 
 - **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
