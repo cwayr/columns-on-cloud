@@ -1,5 +1,5 @@
 ---
-title: "Using AWS CKD with GitHub Actions (example)"
+title: "Using AWS CDK with GitHub Actions (example)"
 date: "2023-07-17"
 description: Dive into this practical guide on how to integrate AWS CDK with GitHub Actions for streamlined deployments, including step-by-step instructions, potential pitfalls, and their solutions.
 ---
@@ -53,7 +53,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-		- name: Setup Node
+		  - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: 16
@@ -79,7 +79,7 @@ jobs:
 ### **Key Points:**
 
 - Ensure the correct AWS region is set in the **`Configure AWS Credentials`** step.
-- Replace **`npx cdk deploy --require-approval never`** with your CDK deploy command if it's different.
+- **`--require-approval never`** skips any user confirmation steps in the deployment process. This is useful for automation, but could lead to sensitive changes being deployed if you are not careful.
 - Use branches you want to trigger this workflow in the **`push:`** section.
 
 ## **Potential Issues and Solutions**
