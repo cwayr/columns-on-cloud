@@ -28,6 +28,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
