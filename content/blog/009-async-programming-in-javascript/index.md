@@ -31,7 +31,7 @@ To better grasp asynchronous JavaScript, it's essential to understand the JavaSc
 
 The event loop continuously monitors both the call stack and the callback queue. It waits for the call stack to be empty before pushing callbacks from the queue to the call stack for execution. This ensures that async tasks are processed when the synchronous code has completed.
 
-```md
+```mermaid
 graph TD
 A[Call Stack] -.->|synchronous| B(Code)
 B -- async task --> C[Callback Queue]
