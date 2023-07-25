@@ -1,8 +1,8 @@
 [![Production](https://api.netlify.com/api/v1/badges/9d532ec5-0840-4992-8be1-3eb980781e4c/deploy-status?branch=master)](https://app.netlify.com/sites/columnsoncloud/deploys)
 
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://github.com/cwaymeyer/columns-on-cloud/blob/master/src/images/logo-light.png?raw=true" width="600" />
+  <a href="https://www.columnsoncloud.com">
+    <img alt="Gatsby" src="https://github.com/cwaymeyer/columns-on-cloud/blob/master/src/images/logo-light.png" width="600" />
   </a>
 </p>
 
