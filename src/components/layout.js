@@ -9,7 +9,14 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading" style={{ textAlign: "center" }}>
+      <h1
+        className="main-heading"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "start",
+        }}
+      >
         <Link to="/">
           <StaticImage
             src="../images/logo-light.png"
@@ -18,11 +25,26 @@ const Layout = ({ location, title, children }) => {
             style={{ width: "85%" }}
           />
         </Link>
+        <Link to="https://twitter.com/ColumnsOnCloud">
+          <StaticImage
+            src="../images/twitter.png"
+            alt="Twitter logo"
+            placeholder="blurred"
+            style={{ width: "24px" }}
+          />
+        </Link>
       </h1>
     )
   } else {
     header = (
-      <>
+      <h1
+        className="article-heading"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "start",
+        }}
+      >
         <Link className="header-link-home" to="/">
           <StaticImage
             src="../images/logo-light.png"
@@ -31,7 +53,15 @@ const Layout = ({ location, title, children }) => {
             placeholder="blurred"
           />
         </Link>
-      </>
+        <Link to="https://twitter.com/ColumnsOnCloud">
+          <StaticImage
+            src="../images/twitter.png"
+            alt="Twitter logo"
+            placeholder="blurred"
+            style={{ width: "24px" }}
+          />
+        </Link>
+      </h1>
     )
   }
 
