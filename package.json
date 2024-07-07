@@ -4,6 +4,14 @@
   "description": "A developers blog with a focus on cloud technologies and AWS",
   "version": "0.1.0",
   "author": "Caleb Waymeyer <cjwaymeyer@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
   "bugs": {
     "url": "https://github.com/cwaymeyer/columns-on-cloud/issues"
   },
@@ -45,14 +53,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cwaymeyer/columns-on-cloud.git"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
 }

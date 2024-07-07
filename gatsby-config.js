@@ -9,10 +9,7 @@ module.exports = {
       summary: ``,
     },
     description: `Developer blog focused on cloud technology and AWS. Explanations, how-tos and step-by-step development tutorials for coding with tools such as AWS CDK.`,
-    siteUrl: `https://www.columnsoncloud.com`,
-    social: {
-      twitter: `columnsoncloud`,
-    },
+    siteUrl: `https://www.columnsoncloud.com`
   },
   plugins: [
     `gatsby-plugin-sitemap`,

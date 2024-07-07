@@ -18,9 +18,6 @@ const Bio = () => {
             name
             summary
           }
-          social {
-            twitter
-          }
         }
       }
     }
@@ -41,18 +38,6 @@ const Bio = () => {
         quality={95}
         alt="Profile picture"
       />
-      {author?.name && (
-        <p>
-          Maintained by{" "}
-          <strong>
-            <a href="https://www.linkedin.com/in/calebwaymeyer/">
-              {author.name}
-            </a>
-          </strong>{" "}
-          {author?.summary || null}
-          {` `}
-        </p>
-      )}
     </div>
   )
 }

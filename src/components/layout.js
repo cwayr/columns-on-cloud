@@ -25,14 +25,6 @@ const Layout = ({ location, title, children }) => {
             style={{ width: "85%" }}
           />
         </Link>
-        <Link to="https://twitter.com/ColumnsOnCloud">
-          <StaticImage
-            src="../images/twitter.png"
-            alt="Twitter logo"
-            placeholder="blurred"
-            style={{ width: "24px" }}
-          />
-        </Link>
       </h1>
     )
   } else {
@@ -51,14 +43,6 @@ const Layout = ({ location, title, children }) => {
             alt="Columns on Cloud logo and header"
             style={{ width: "160px" }}
             placeholder="blurred"
-          />
-        </Link>
-        <Link to="https://twitter.com/ColumnsOnCloud">
-          <StaticImage
-            src="../images/twitter.png"
-            alt="Twitter logo"
-            placeholder="blurred"
-            style={{ width: "24px" }}
           />
         </Link>
       </h1>
